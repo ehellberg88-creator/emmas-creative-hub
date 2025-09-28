@@ -1,6 +1,6 @@
 import { PortfolioButton } from "./ui/portfolio-button";
 import { Download, Briefcase, Mail } from "lucide-react";
-import emmaProfile from "@/assets/emma-profile.jpg";
+import emmaProfile from "@/assets/emma-real-profile.jpg";
 
 interface PortfolioHeaderProps {
   name: string;
