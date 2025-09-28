@@ -108,9 +108,11 @@ export default function Portfolio() {
                 <div className="w-8 h-1 bg-hero-gradient rounded-full"></div>
                 Om mig
               </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Jag trivs i ett högt tempo och har lätt för att växla mellan olika uppgifter, ta ansvar och leverera resultat i varierande situationer. Jag har en naturlig förmåga att prioritera och anpassa mig efter förändrade förutsättningar, vilket gör att jag kan upprätthålla kvalitet och effektivitet även under press.
+              </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Trivs i ett högt tempo och har lätt för att växla mellan olika uppgifter, ansvar och leverera resultat i varierande situationer. 
-                På fritiden ägnar jag mig åt ungdomsidrott, musik och ledarskap där jag får möjlighet att utveckla både mig själv och andra.
+                På fritiden ägnar jag mig åt ungdomsidrott, musik och ledarskap. Dessa aktiviteter ger mig möjlighet att både utveckla mig själv och inspirera andra, samtidigt som jag stärker mina organisatoriska och kommunikativa färdigheter. Jag värdesätter samarbete och engagemang och tycker om att skapa miljöer där människor kan växa och nå sin fulla potential.
               </p>
 
               {/* Case Studies */}
