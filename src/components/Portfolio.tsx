@@ -65,13 +65,13 @@ export default function Portfolio() {
     { 
       id: 1, 
       title: 'Game Psychology and Gamification', 
-      intro: 'Utforskning av spelpsykologi och hur gamification kan användas för att förbättra användarupplevelse och engagemang i digitala produkter.', 
+      intro: 'En fördjupad utforskning av spelpsykologi och de principer som styr mänskligt beteende inom spelmiljöer. Fokus ligger på hur gamification kan användas strategiskt för att öka engagemang, motivation och användarupplevelse i digitala produkter. Genom att analysera både belöningssystem, feedbackmekanismer och användarbeteenden lär jag mig att skapa lösningar som gör digitala upplevelser mer interaktiva och meningsfulla.', 
       link: '#game-psychology' 
     },
     { 
       id: 2, 
       title: 'Game Design', 
-      intro: 'Djupgående studie av spelmekanik, användarinteraktion och hur designprinciper kan skapa meningsfulla och engagerande spelupplevelser.', 
+      intro: 'En djupgående studie av spelmekanik, användarinteraktion och designprinciper som skapar engagerande och minnesvärda spelupplevelser. Här ingår att förstå hur olika komponenter, som nivådesign, regler och visuell estetik, samverkar för att forma spelarens upplevelse. Genom praktiska projekt och teoretiska analyser utvecklar jag förmågan att skapa spel som är både underhållande och strategiskt välbalanserade.', 
       link: '#game-design' 
     }
   ];
