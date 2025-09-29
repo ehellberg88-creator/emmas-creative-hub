@@ -196,42 +196,62 @@ export default function Portfolio() {
 
               {/* Other Commitments */}
               <div>
-                <h4 className="font-semibold text-card-foreground mb-4">Kils AIK Friidrott</h4>
-                <div className="space-y-4">
+                <h4 className="font-semibold text-card-foreground mb-6">Övriga engagemang</h4>
+                <div className="space-y-6">
+                  {/* Kils AIK Friidrott */}
                   <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
-                    <img 
-                      src={friidrottImage} 
-                      alt="Kils AIK Friidrott träning med flaggor och atletikbana" 
-                      className="w-full h-48 object-cover rounded-lg mb-3"
-                    />
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      Sedan 2020 har jag varit aktiv som ledare inom Kils AIK Friidrott. Åldern på grupperna har varierat något men idag är vi två ledare på en grupp som är födda mellan 2011 och 2014. En kul och utmanande ålder där vi tränar året om både inomhus och utomhus. I detta ingår att planera träningar tillsammans, och hitta en bra nivå för alla ungdomar i gruppen för att ge en så allsidig träning som möjligt.
-                    </p>
+                    <h5 className="font-semibold text-card-foreground mb-3">Kils AIK Friidrott</h5>
+                    <div className="flex gap-4 items-start">
+                      <div className="flex-1">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Sedan 2020 har jag varit aktiv som ledare inom Kils AIK Friidrott. Åldern på grupperna har varierat något men idag är vi två ledare på en grupp som är födda mellan 2011 och 2014. En kul och utmanande ålder där vi tränar året om både inomhus och utomhus. I detta ingår att planera träningar tillsammans, och hitta en bra nivå för alla ungdomar i gruppen för att ge en så allsidig träning som möjligt.
+                        </p>
+                      </div>
+                      <div className="flex-shrink-0">
+                        <img 
+                          src={friidrottImage} 
+                          alt="Kils AIK Friidrott träning med flaggor och atletikbana" 
+                          className="w-24 h-24 object-cover rounded-full border-2 border-border/50"
+                        />
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="space-y-4">
-                    <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
-                      <h5 className="font-semibold text-card-foreground mb-3">IF Kil</h5>
-                      <img 
-                        src={ifKilImage} 
-                        alt="Emma som tränare för IF Kil med unga fotbollsspelare" 
-                        className="w-full h-48 object-cover rounded-lg mb-3"
-                      />
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Sedan 2022 har jag varit med som tränare för ett gäng tjejer födda 2015. I dagsläget är vi två tränare för laget. Här är jag med och gör träningsupplägg. Bokar planer och domare för hemmamatcher. Samt planer för våra träningar.
-                      </p>
+                  {/* IF Kil */}
+                  <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
+                    <h5 className="font-semibold text-card-foreground mb-3">IF Kil</h5>
+                    <div className="flex gap-4 items-start">
+                      <div className="flex-1">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Sedan 2022 har jag varit med som tränare för ett gäng tjejer födda 2015. I dagsläget är vi två tränare för laget. Här är jag med och gör träningsupplägg. Bokar planer och domare för hemmamatcher. Samt planer för våra träningar.
+                        </p>
+                      </div>
+                      <div className="flex-shrink-0">
+                        <img 
+                          src={ifKilImage} 
+                          alt="Emma som tränare för IF Kil med unga fotbollsspelare" 
+                          className="w-24 h-24 object-cover rounded-full border-2 border-border/50"
+                        />
+                      </div>
                     </div>
-                    
-                    <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
-                      <h5 className="font-semibold text-card-foreground mb-3">Kils Ensembleförening</h5>
-                      <img 
-                        src={ensembleImage} 
-                        alt="Emma som ordförande i Kils Ensembleförening med unga musiker" 
-                        className="w-full h-48 object-cover rounded-lg mb-3"
-                      />
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Ordförande i Kils Kulturskolas Ensembleförening. En förening som tillsammans med kulturskolans orkesterverksamhet skapar fler möjligheter för unga att mötas i musik. Varje år arrangerar vi två läger. Ett dagsläger där vi åker iväg och spelar en konsert och ett övernattningsläger som också avslutas med en konsert tillsammans.
-                      </p>
+                  </div>
+                  
+                  {/* Kils Ensembleförening */}
+                  <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
+                    <h5 className="font-semibold text-card-foreground mb-3">Kils Ensembleförening</h5>
+                    <div className="flex gap-4 items-start">
+                      <div className="flex-1">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Ordförande i Kils Kulturskolas Ensembleförening. En förening som tillsammans med kulturskolans orkesterverksamhet skapar fler möjligheter för unga att mötas i musik. Varje år arrangerar vi två läger. Ett dagsläger där vi åker iväg och spelar en konsert och ett övernattningsläger som också avslutas med en konsert tillsammans.
+                        </p>
+                      </div>
+                      <div className="flex-shrink-0">
+                        <img 
+                          src={ensembleImage} 
+                          alt="Emma som ordförande i Kils Ensembleförening med unga musiker" 
+                          className="w-24 h-24 object-cover rounded-full border-2 border-border/50"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
