@@ -5,6 +5,7 @@ import { PortfolioButton } from "./ui/portfolio-button";
 import { ExternalLink, Mail, Phone, Linkedin, Facebook, Instagram, MapPin, Calendar, Briefcase, Gamepad2, Lightbulb } from "lucide-react";
 import friidrottImage from "../assets/friidrott-image.jpg";
 import ifKilImage from "../assets/if-kil-image.jpg";
+import ensembleImage from "../assets/ensemble-image.jpg";
 
 export default function Portfolio() {
   const personalInfo = {
@@ -221,12 +222,16 @@ export default function Portfolio() {
                       </p>
                     </div>
                     
-                    <div className="flex justify-between items-start bg-accent/30 p-3 rounded-lg">
-                      <div>
-                        <div className="font-medium text-xs text-accent-foreground">Ordförande</div>
-                        <div className="text-xs text-muted-foreground">Kils Ensembleförening</div>
-                      </div>
-                      <div className="text-xs text-primary font-medium">pågående</div>
+                    <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
+                      <h5 className="font-semibold text-card-foreground mb-3">Kils Ensembleförening</h5>
+                      <img 
+                        src={ensembleImage} 
+                        alt="Emma som ordförande i Kils Ensembleförening med unga musiker" 
+                        className="w-full h-48 object-cover rounded-lg mb-3"
+                      />
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Ordförande i Kils Kulturskolas Ensembleförening. En förening som tillsammans med kulturskolans orkesterverksamhet skapar fler möjligheter för unga att mötas i musik. Varje år arrangerar vi två läger. Ett dagsläger där vi åker iväg och spelar en konsert och ett övernattningsläger som också avslutas med en konsert tillsammans.
+                      </p>
                     </div>
                   </div>
                 </div>
