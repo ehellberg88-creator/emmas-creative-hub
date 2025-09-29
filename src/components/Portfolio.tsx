@@ -3,6 +3,7 @@ import CaseStudyCard from "./CaseStudyCard";
 import SkillBadge from "./SkillBadge";
 import { PortfolioButton } from "./ui/portfolio-button";
 import { ExternalLink, Mail, Phone, Linkedin, Facebook, Instagram, MapPin, Calendar, Briefcase, Gamepad2, Lightbulb } from "lucide-react";
+import friidrottImage from "../assets/friidrott-image.jpg";
 
 export default function Portfolio() {
   const personalInfo = {
@@ -193,17 +194,35 @@ export default function Portfolio() {
 
               {/* Other Commitments */}
               <div>
-                <h4 className="font-semibold text-card-foreground mb-3">Övriga åtaganden</h4>
-                <div className="space-y-2">
-                  {otherCommitments.map((c, i) => (
-                    <div key={i} className="flex justify-between items-start bg-accent/30 p-3 rounded-lg">
+                <h4 className="font-semibold text-card-foreground mb-4">Kils AIK Friidrott</h4>
+                <div className="space-y-4">
+                  <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
+                    <img 
+                      src={friidrottImage} 
+                      alt="Kils AIK Friidrott träning med flaggor och atletikbana" 
+                      className="w-full h-48 object-cover rounded-lg mb-3"
+                    />
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Sedan 2020 har jag varit aktiv som ledare inom Kils AIK Friidrott. Åldern på grupperna har varierat något men idag är vi två ledare på en grupp som är födda mellan 2011 och 2014. En kul och utmanande ålder där vi tränar året om både inomhus och utomhus. I detta ingår att planera träningar tillsammans, och hitta en bra nivå för alla ungdomar i gruppen för att ge en så allsidig träning som möjligt.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-start bg-accent/30 p-3 rounded-lg">
                       <div>
-                        <div className="font-medium text-xs text-accent-foreground">{c.role}</div>
-                        <div className="text-xs text-muted-foreground">{c.org}</div>
+                        <div className="font-medium text-xs text-accent-foreground">Tränare</div>
+                        <div className="text-xs text-muted-foreground">IF Kil Fotboll (F2015)</div>
                       </div>
-                      <div className="text-xs text-primary font-medium">{c.period}</div>
+                      <div className="text-xs text-primary font-medium">2022–nu</div>
                     </div>
-                  ))}
+                    <div className="flex justify-between items-start bg-accent/30 p-3 rounded-lg">
+                      <div>
+                        <div className="font-medium text-xs text-accent-foreground">Ordförande</div>
+                        <div className="text-xs text-muted-foreground">Kils Ensembleförening</div>
+                      </div>
+                      <div className="text-xs text-primary font-medium">pågående</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
