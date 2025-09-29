@@ -4,6 +4,7 @@ import SkillBadge from "./SkillBadge";
 import { PortfolioButton } from "./ui/portfolio-button";
 import { ExternalLink, Mail, Phone, Linkedin, Facebook, Instagram, MapPin, Calendar, Briefcase, Gamepad2, Lightbulb } from "lucide-react";
 import friidrottImage from "../assets/friidrott-image.jpg";
+import ifKilImage from "../assets/if-kil-image.jpg";
 
 export default function Portfolio() {
   const personalInfo = {
@@ -207,14 +208,19 @@ export default function Portfolio() {
                     </p>
                   </div>
                   
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-start bg-accent/30 p-3 rounded-lg">
-                      <div>
-                        <div className="font-medium text-xs text-accent-foreground">Tränare</div>
-                        <div className="text-xs text-muted-foreground">IF Kil Fotboll (F2015)</div>
-                      </div>
-                      <div className="text-xs text-primary font-medium">2022–nu</div>
+                  <div className="space-y-4">
+                    <div className="bg-accent/20 p-4 rounded-xl border border-border/30">
+                      <h5 className="font-semibold text-card-foreground mb-3">IF Kil</h5>
+                      <img 
+                        src={ifKilImage} 
+                        alt="Emma som tränare för IF Kil med unga fotbollsspelare" 
+                        className="w-full h-48 object-cover rounded-lg mb-3"
+                      />
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Sedan 2022 har jag varit med som tränare för ett gäng tjejer födda 2015. I dagsläget är vi två tränare för laget. Här är jag med och gör träningsupplägg. Bokar planer och domare för hemmamatcher. Samt planer för våra träningar.
+                      </p>
                     </div>
+                    
                     <div className="flex justify-between items-start bg-accent/30 p-3 rounded-lg">
                       <div>
                         <div className="font-medium text-xs text-accent-foreground">Ordförande</div>
