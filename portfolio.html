@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Hellberg - UX Designer Portfolio</title>
+    <meta name="description" content="Emma Hellberg - UX Designer, Säljare, Projektledare och Ungdomsledare. Erfaren inom gamification, användarupplevelse och ledarskap.">
+    <meta name="author" content="Emma Hellberg">
+    
+    <meta property="og:title" content="Emma Hellberg - UX Designer Portfolio">
+    <meta property="og:description" content="Mångsidig UX Designer med bred erfarenhet inom service, försäljning och ledarskap. Specialiserad på gamification och användarupplevelse.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        /* Design system variables */
+        :root {
+            --primary: #8b5cf6;
+            --primary-foreground: #ffffff;
+            --secondary: #f1a2b7;
+            --secondary-foreground: #1a1a1a;
+            --muted: #f8fafc;
+            --muted-foreground: #64748b;
+            --accent: #fdf2f8;
+            --accent-foreground: #1a1a1a;
+            --card: #ffffff;
+            --card-foreground: #1a1a1a;
+            --border: #e2e8f0;
+            --hero-gradient: linear-gradient(135deg, #8b5cf6, #c084fc);
+            --card-gradient: linear-gradient(145deg, #ffffff, #f8fafc);
+            --accent-gradient: linear-gradient(135deg, #fdf2f8, #fce7f3);
+            --shadow-elegant: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+            --shadow-soft: 0 4px 20px -4px rgba(26, 26, 26, 0.1);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Utility classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .grid {
+            display: grid;
+        }
+        
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .items-start {
+            align-items: flex-start;
+        }
+        
+        .justify-center {
+            justify-content: center;
+        }
+        
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        
+        .flex-1 {
+            flex: 1 1 0%;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .rounded-full {
+            border-radius: 9999px;
+        }
+        
+        .rounded-xl {
+            border-radius: 0.75rem;
+        }
+        
+        .rounded-2xl {
+            border-radius: 1rem;
+        }
+        
+        .rounded-3xl {
+            border-radius: 1.5rem;
+        }
+        
+        .p-4 { padding: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mt-6 { margin-top: 1.5rem; }
+        .mt-12 { margin-top: 3rem; }
+        
+        /* Typography */
+        .text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+        
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+        
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+        
+        .text-xs {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .font-semibold {
+            font-weight: 600;
+        }
+        
+        .font-medium {
+            font-weight: 500;
+        }
+        
+        .font-light {
+            font-weight: 300;
+        }
+        
+        /* Component styles */
+        .header {
+            background: var(--hero-gradient);
+            padding: 3rem 2rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-elegant);
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .card {
+            background: var(--card-gradient);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+        }
+        
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-elegant);
+        }
+        
+        .skill-badge {
+            display: inline-block;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            border: 1px solid;
+            transition: var(--transition-smooth);
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .skill-badge-hard {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--primary);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        
+        .skill-badge-soft {
+            background: rgba(241, 162, 183, 0.3);
+            color: var(--secondary-foreground);
+            border-color: rgba(241, 162, 183, 0.5);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: 1px solid transparent;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(139, 92, 246, 0.9);
+        }
+        
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .case-study-card {
+            background: var(--card-gradient);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            transition: var(--transition-smooth);
+        }
+        
+        .case-study-card:hover {
+            transform: scale(1.02);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: var(--shadow-elegant);
+        }
+        
+        .profile-img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow-soft);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition-smooth);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .engagement-img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border);
+            flex-shrink: 0;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            
+            .md\:text-5xl {
+                font-size: 3rem;
+                line-height: 1;
+            }
+            
+            .md\:text-2xl {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+            
+            .md\:flex-row {
+                flex-direction: row;
+            }
+            
+            .md\:text-left {
+                text-align: left;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            
+            .lg\:col-span-2 {
+                grid-column: span 2 / span 2;
+            }
+        }
+        
+        /* Icon styles */
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            vertical-align: middle;
+        }
+        
+        .icon-sm {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        .icon-lg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: var(--primary);
+        }
+        
+        .border-l-2 {
+            border-left: 2px solid;
+        }
+        
+        .border-primary {
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        
+        .border-secondary {
+            border-color: rgba(241, 162, 183, 0.5);
+        }
+        
+        .pl-4 {
+            padding-left: 1rem;
+        }
+        
+        .pb-2 {
+            padding-bottom: 0.5rem;
+        }
+        
+        .pb-3 {
+            padding-bottom: 0.75rem;
+        }
+        
+        .space-y-3 > * + * {
+            margin-top: 0.75rem;
+        }
+        
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+        
+        .space-y-6 > * + * {
+            margin-top: 1.5rem;
+        }
+        
+        .space-y-8 > * + * {
+            margin-top: 2rem;
+        }
+        
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        
+        .accent-section {
+            background: var(--accent-gradient);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(226, 232, 240, 0.3);
+        }
+        
+        .engagement-card {
+            background: rgba(253, 242, 248, 0.2);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(226, 232, 240, 0.3);
+        }
+        
+        .fact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(226, 232, 240, 0.3);
+        }
+        
+        .fact-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-section {
+            background: var(--hero-gradient);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-elegant);
+            color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            width: 2rem;
+            height: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+        
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div style="min-height: 100vh; background: #ffffff;">
+        <div style="padding: 3rem 1.5rem;">
+            <!-- Header -->
+            <header class="container">
+                <div class="header">
+                    <div class="flex flex-wrap md:flex-row items-center gap-8 text-center md:text-left">
+                        <div style="position: relative;">
+                            <img 
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDE2MCAxNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIiByeD0iODAiIGZpbGw9IiNGM0Y0RjYiLz4KPHN2ZyB4PSI0MCIgeT0iNDAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2MzY2RjEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPHA+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMyIvPjwvcD4KPHA+PHBhdGggZD0ibTIxIDEyLTEtMWgtNGwtMS0xIDEtMSA0LTEgMSAxdjJsLTEgMWgtNGwtMS0xIDEtMSIvPjwvcD4KPHA+PHBhdGggZD0ibTMgMTIgMS0xaDRsMS0xLTEtMS00LTEtMSAxdjJsMS0xaDRsMS0xLTEtMSIvPjwvcD4KPC9zdmc+Cjwvc3ZnPgo="
+                                alt="Emma Hellberg - UX Designer" 
+                                class="profile-img"
+                            />
+                            <div style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(to bottom right, rgba(255,255,255,0.1), transparent);"></div>
+                        </div>
+                        
+                        <div class="flex-1" style="color: white;">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-3" style="letter-spacing: -0.025em;">Emma Hellberg</h1>
+                            <p class="text-xl md:text-2xl font-light mb-6" style="color: rgba(255,255,255,0.9);">UX Designer / Säljare / Projektledare / Ungdomsledare</p>
+                            <p class="text-lg leading-relaxed mb-8" style="color: rgba(255,255,255,0.8); max-width: 32rem;">
+                                Mångsidig och engagerad person med bred erfarenhet inom service, försäljning och ledarskap. Tidigare arbetat inom restaurang och hotell, samt försäljning. Med starka kommunikativa färdigheter och förmåga att ge högkvalitativ kundservice.
+                            </p>
+                            
+                            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                                <a href="/cv.pdf" class="btn btn-outline">
+                                    📄 Ladda ner CV
+                                </a>
+                                <a href="#case-studies" class="btn btn-primary">
+                                    💼 Utforska case studies
+                                </a>
+                                <a href="#kontakt" class="btn btn-outline">
+                                    📧 Kontakta mig
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="container grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Content -->
+                <section class="lg:col-span-2 space-y-8">
+                    <!-- About Me -->
+                    <div class="card p-8">
+                        <h2 class="text-3xl font-bold mb-6 flex items-center gap-3" style="color: var(--card-foreground);">
+                            <div style="width: 2rem; height: 0.25rem; background: var(--hero-gradient); border-radius: 9999px;"></div>
+                            Om mig
+                        </h2>
+                        <p class="leading-relaxed mb-4" style="color: var(--muted-foreground);">
+                            Jag trivs i ett högt tempo och har lätt för att växla mellan olika uppgifter, ta ansvar och leverera resultat i varierande situationer. Jag har en naturlig förmåga att prioritera och anpassa mig efter förändrade förutsättningar, vilket gör att jag kan upprätthålla kvalitet och effektivitet även under press.
+                        </p>
+                        <p class="leading-relaxed mb-6" style="color: var(--muted-foreground);">
+                            På fritiden ägnar jag mig åt ungdomsidrott, musik och ledarskap. Dessa aktiviteter ger mig möjlighet att både utveckla mig själv och inspirera andra, samtidigt som jag stärker mina organisatoriska och kommunikativa färdigheter. Jag värdesätter samarbete och engagemang och tycker om att skapa miljöer där människor kan växa och nå sin fulla potential.
+                        </p>
+
+                        <!-- Case Studies -->
+                        <div id="case-studies">
+                            <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2" style="color: var(--card-foreground);">
+                                💼 Case Studies
+                            </h3>
+                            
+                            <div class="grid gap-6 mb-8">
+                                <article class="case-study-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="p-2 rounded-lg" style="background: var(--accent);">
+                                            🎮
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="text-lg font-semibold mb-2" style="color: var(--card-foreground);">
+                                                Game Psychology and Gamification
+                                            </h4>
+                                            <p class="text-sm leading-relaxed mb-4" style="color: var(--muted-foreground);">
+                                                En fördjupad utforskning av spelpsykologi och de principer som styr mänskligt beteende inom spelmiljöer. Fokus ligger på hur gamification kan användas strategiskt för att öka engagemang, motivation och användarupplevelse i digitala produkter.
+                                            </p>
+                                            <a href="#game-psychology" class="inline-flex items-center gap-2 font-medium text-sm" style="color: var(--primary);">
+                                                Läs mer →
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="case-study-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="p-2 rounded-lg" style="background: var(--accent);">
+                                            💡
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="text-lg font-semibold mb-2" style="color: var(--card-foreground);">
+                                                Game Design
+                                            </h4>
+                                            <p class="text-sm leading-relaxed mb-4" style="color: var(--muted-foreground);">
+                                                En djupgående studie av spelmekanik, användarinteraktion och designprinciper som skapar engagerande och minnesvärda spelupplevelser. Här ingår att förstå hur olika komponenter samverkar för att forma spelarens upplevelse.
+                                            </p>
+                                            <a href="#game-design" class="inline-flex items-center gap-2 font-medium text-sm" style="color: var(--primary);">
+                                                Läs mer →
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="flex flex-wrap gap-4">
+                                <a href="#game-psychology" class="btn btn-primary">
+                                    🎮 Se Game Psychology
+                                </a>
+                                <a href="#game-design" class="btn" style="background: var(--secondary); color: var(--secondary-foreground);">
+                                    💡 Se Game Design
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- References -->
+                        <div class="mt-12 accent-section">
+                            <h3 class="text-xl font-semibold mb-3" style="color: var(--accent-foreground);">Referenser</h3>
+                            <p class="text-sm" style="color: var(--muted-foreground);">
+                                Referenser lämnas gärna på förfrågan. Kontakta mig så förmedlar jag kontaktuppgifter till tidigare arbetsgivare och kollegor som kan ge en djupare bild av min arbetsinsats och personlighet.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sidebar -->
+                <aside class="space-y-6">
+                    <!-- Experience & Education -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2" style="color: var(--card-foreground);">
+                            📅 CV / Erfarenhet
+                        </h3>
+                        
+                        <!-- Education -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3" style="color: var(--card-foreground);">Utbildning</h4>
+                            <div class="space-y-3">
+                                <div class="border-l-2 border-primary pl-4 pb-2">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Futuregames</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Experience Designer</div>
+                                    <div class="text-xs font-medium" style="color: var(--primary);">2024–pågående</div>
+                                </div>
+                                <div class="border-l-2 border-primary pl-4 pb-2">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">NTI</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">C#</div>
+                                    <div class="text-xs font-medium" style="color: var(--primary);">2020</div>
+                                </div>
+                                <div class="border-l-2 border-primary pl-4 pb-2">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Frans Schartaus Handelsinstitut</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Diplomerad Resekonsult</div>
+                                    <div class="text-xs font-medium" style="color: var(--primary);">2010–2012</div>
+                                </div>
+                                <div class="border-l-2 border-primary pl-4 pb-2">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Karlstad Universitet</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Turism</div>
+                                    <div class="text-xs font-medium" style="color: var(--primary);">2009</div>
+                                </div>
+                                <div class="border-l-2 border-primary pl-4 pb-2">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Tullholmsgymnasiet</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Hotell och Restaurang</div>
+                                    <div class="text-xs font-medium" style="color: var(--primary);">2004–2007</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3" style="color: var(--card-foreground);">Arbetslivserfarenhet</h4>
+                            <div class="space-y-4">
+                                <div class="border-l-2 border-secondary pl-4 pb-3">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Distributionsansvarig</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Svensk Direktreklam</div>
+                                    <div class="text-xs font-medium mb-2" style="color: var(--primary);">2022–2024</div>
+                                    <div class="text-xs leading-relaxed" style="color: var(--muted-foreground);">Tillförordnad platschef under frånvaro och semester. Bokning av reklamutdelare, fakturering, reklamationsärenden, lönekörning och offerter till kunder.</div>
+                                </div>
+                                <div class="border-l-2 border-secondary pl-4 pb-3">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Administratör</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Klaravik AB</div>
+                                    <div class="text-xs font-medium mb-2" style="color: var(--primary);">2017–2021</div>
+                                    <div class="text-xs leading-relaxed" style="color: var(--muted-foreground);">Hantering av objekt med finansiering, utveckling av rutiner och processer, nära kontakt med kollegor, säljande kunder och finansbolag. Utveckling av plattformens backoffice.</div>
+                                </div>
+                                <div class="border-l-2 border-secondary pl-4 pb-3">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Resesäljare</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Resia AB, Arvika</div>
+                                    <div class="text-xs font-medium mb-2" style="color: var(--primary);">2012–2016</div>
+                                    <div class="text-xs leading-relaxed" style="color: var(--muted-foreground);">Bokning av resor och framtagning av reseförslag för privat- och affärskunder. Skyltning av butik, kontanthantering och kundservice.</div>
+                                </div>
+                                <div class="border-l-2 border-secondary pl-4 pb-3">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Receptionist/Buffévärd</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Hotell Drott, Karlstad</div>
+                                    <div class="text-xs font-medium mb-2" style="color: var(--primary);">2012 (sommar)</div>
+                                    <div class="text-xs leading-relaxed" style="color: var(--muted-foreground);">Ansvar för in- och utcheckning, bokningar, buffé, disk och servering.</div>
+                                </div>
+                                <div class="border-l-2 border-secondary pl-4 pb-3">
+                                    <div class="font-medium text-sm" style="color: var(--card-foreground);">Kallskänka</div>
+                                    <div class="text-sm" style="color: var(--muted-foreground);">Ristorante Alfie/Tiffany, Karlstad</div>
+                                    <div class="text-xs font-medium mb-2" style="color: var(--primary);">2006–2012</div>
+                                    <div class="text-xs leading-relaxed" style="color: var(--muted-foreground);">Förberedelse och tillagning av förrätter och desserter.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Commitments -->
+                        <div>
+                            <h4 class="font-semibold mb-6" style="color: var(--card-foreground);">Övriga engagemang</h4>
+                            <div class="space-y-6">
+                                <!-- Kils AIK Friidrott -->
+                                <div class="engagement-card">
+                                    <h5 class="font-semibold mb-3" style="color: var(--card-foreground);">Kils AIK Friidrott</h5>
+                                    <div class="flex gap-4 items-start">
+                                        <div class="flex-1">
+                                            <p class="text-sm leading-relaxed" style="color: var(--muted-foreground);">
+                                                Sedan 2020 har jag varit aktiv som ledare inom Kils AIK Friidrott. Åldern på grupperna har varierat något men idag är vi två ledare på en grupp som är födda mellan 2011 och 2014. En kul och utmanande ålder där vi tränar året om både inomhus och utomhus.
+                                            </p>
+                                        </div>
+                                        <div class="engagement-img" style="background: #f3f4f6; display: flex; align-items: center; justify-content: center; color: #6366f1;">
+                                            🏃‍♀️
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- IF Kil -->
+                                <div class="engagement-card">
+                                    <h5 class="font-semibold mb-3" style="color: var(--card-foreground);">IF Kil</h5>
+                                    <div class="flex gap-4 items-start">
+                                        <div class="flex-1">
+                                            <p class="text-sm leading-relaxed" style="color: var(--muted-foreground);">
+                                                Sedan 2022 har jag varit med som tränare för ett gäng tjejer födda 2015. I dagsläget är vi två tränare för laget. Här är jag med och gör träningsupplägg. Bokar planer och domare för hemmamatcher.
+                                            </p>
+                                        </div>
+                                        <div class="engagement-img" style="background: #f3f4f6; display: flex; align-items: center; justify-content: center; color: #6366f1;">
+                                            ⚽
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Kils Ensembleförening -->
+                                <div class="engagement-card">
+                                    <h5 class="font-semibold mb-3" style="color: var(--card-foreground);">Kils Ensembleförening</h5>
+                                    <div class="flex gap-4 items-start">
+                                        <div class="flex-1">
+                                            <p class="text-sm leading-relaxed" style="color: var(--muted-foreground);">
+                                                Ordförande i Kils Kulturskolas Ensembleförening. En förening som tillsammans med kulturskolans orkesterverksamhet skapar fler möjligheter för unga att mötas i musik. Varje år arrangerar vi två läger.
+                                            </p>
+                                        </div>
+                                        <div class="engagement-img" style="background: #f3f4f6; display: flex; align-items: center; justify-content: center; color: #6366f1;">
+                                            🎵
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold mb-6" style="color: var(--card-foreground);">Kompetenser</h3>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3" style="color: var(--card-foreground);">Hårda färdigheter</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-badge skill-badge-hard">UX Design</span>
+                                    <span class="skill-badge skill-badge-hard">Gamification</span>
+                                    <span class="skill-badge skill-badge-hard">C#</span>
+                                    <span class="skill-badge skill-badge-hard">Administration</span>
+                                    <span class="skill-badge skill-badge-hard">Projektledning</span>
+                                    <span class="skill-badge skill-badge-hard">Försäljning</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3" style="color: var(--card-foreground);">Mjuka färdigheter</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-badge skill-badge-soft">Kommunikation</span>
+                                    <span class="skill-badge skill-badge-soft">Ledarskap</span>
+                                    <span class="skill-badge skill-badge-soft">Serviceinriktad</span>
+                                    <span class="skill-badge skill-badge-soft">Problemlösning</span>
+                                    <span class="skill-badge skill-badge-soft">Anpassningsförmåga</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fun Facts -->
+                    <div style="background: var(--accent-gradient); padding: 1.5rem; border-radius: 1rem; box-shadow: var(--shadow-soft); border: 1px solid rgba(226, 232, 240, 0.5);">
+                        <h3 class="text-xl font-bold mb-4" style="color: var(--accent-foreground);">Intressen & Fun Facts</h3>
+                        <div class="space-y-2">
+                            <div class="fact-item">
+                                <div class="fact-dot"></div>
+                                <p class="text-sm" style="color: var(--foreground);">Ledare inom friidrott och fotboll sedan 2020</p>
+                            </div>
+                            <div class="fact-item">
+                                <div class="fact-dot"></div>
+                                <p class="text-sm" style="color: var(--foreground);">Ordförande i Kils Ensembleförening</p>
+                            </div>
+                            <div class="fact-item">
+                                <div class="fact-dot"></div>
+                                <p class="text-sm" style="color: var(--foreground);">Musikintresserad och spelar flera instrument</p>
+                            </div>
+                            <div class="fact-item">
+                                <div class="fact-dot"></div>
+                                <p class="text-sm" style="color: var(--foreground);">Trivs i högt tempo och varierande uppgifter</p>
+                            </div>
+                            <div class="fact-item">
+                                <div class="fact-dot"></div>
+                                <p class="text-sm" style="color: var(--foreground);">Erfaren av att bygga team och utveckla människor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div id="kontakt" class="contact-section">
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                            📧 Kontakt
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span style="color: rgba(255,255,255,0.8);">📧</span>
+                                <a 
+                                    href="mailto:emma_hellberg@hotmail.com" 
+                                    class="text-sm hover:underline"
+                                    style="color: rgba(255,255,255,0.9);"
+                                >
+                                    emma_hellberg@hotmail.com
+                                </a>
+                            </div>
+                            
+                            <div class="flex items-center gap-3">
+                                <span style="color: rgba(255,255,255,0.8);">📱</span>
+                                <a 
+                                    href="tel:073-7334713" 
+                                    class="text-sm"
+                                    style="color: rgba(255,255,255,0.9);"
+                                >
+                                    073-7334713
+                                </a>
+                            </div>
+                            
+                            <div class="flex items-center gap-3">
+                                <span style="color: rgba(255,255,255,0.8);">📍</span>
+                                <span class="text-sm" style="color: rgba(255,255,255,0.9);">Värmland, Sverige</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4" style="border-top: 1px solid rgba(255,255,255,0.2);">
+                            <p class="text-xs mb-3" style="color: rgba(255,255,255,0.7);">Följ mig på sociala medier:</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon">📱</a>
+                                <a href="#" class="social-icon">👥</a>
+                                <a href="#" class="social-icon">📷</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
